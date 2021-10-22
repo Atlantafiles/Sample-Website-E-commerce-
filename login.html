@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> login </title>
+        <link rel="stylesheet" type="text/css" href="atstyle.css">
+        <script src="https://kit.fontawesome.com/19d77944b0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="icecreamstore.html"><img src="Ice Cream Logo Template~2.jpeg" width="80"></a>
+            </div>
+            <div class="nav_side">
+                <a href="aabout.html">About Us</a>
+                <a href="aservices.html">Services</a>
+                <a href="ablog.html">Blogs</a>
+                <a href="acontact.html">Contacts</a>
+                <a href="login.html">Login</a>
+                <a href="asignup.html">Sign up</a>
+            </div>
+        </nav>
+        <div class="login">
+            <h2>Login</h2>
+            <div class="login_form">
+            <form name="login-googlesheet" method="POST">
+                <input type="email" name="Email" placeholder="E-mail ID"><br>
+                <input type="password" name="Password" placeholder="Password" re><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        </div>
+        <footer>
+            <div class="flogo">
+                <a href="icecreamstore.html"><img src="Ice Cream Logo Template~2.jpeg" width="100" alt="Logo"></a>
+            </div>
+            <div class="page">
+                <h3>Pages</h3>
+                <a href="aabout.html">About us</a> |
+                <a href="aservices.html">Services</a> |
+                <a href="login.html">Login</a> |
+                <a href="asignup.html">Sign Up</a> |
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a> |
+                <a href="">Terms of Use</a> |
+                <a href="">Refund Policy</a> |
+            </div>
+            <div class="socials">
+                <h3>Follow us</h3>
+                <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a> |
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a> |
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a> |
+                <a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a> |
+            </div>
+            <div class="contact">
+                <h3>Contact us</h3>
+                <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a> |
+                <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a> |
+                <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a> |
+            </div>
+            <hr>
+            <p>COPYRIGHT &copy; 2021 CREAMARIES All rights reserved.</p>
+        </footer>
+        <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby2dYhmjhZz01K7LoSYDvCFQk9-NPRI1WAYZi_NsxGcV7oQf_2kEsehD9pfobDA3w2m/exec'
+            const form = document.forms['login-googlesheet']
+      
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Hi welcome back! We missed you!"))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>
